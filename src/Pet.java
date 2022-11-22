@@ -3,16 +3,17 @@ public abstract class Pet {
     private boolean bellyful;
 
     private boolean health; // состояние здоровья true - хорошо, false - плохо, пора к ветеринару
-    private String breed; //порода
+    private String breed;
 
     private Environment env;
 
     enum Environment {
         water,
-        earth, //отдельный вопрос, насколько это правильно по конвенции
+        earth,
         air
     }
 
+    static protected TheirSignals theirSignals = new TheirSignals();
 
     public Pet(boolean bellyful, boolean health, String breed, Environment env) {
         this.bellyful = bellyful;
